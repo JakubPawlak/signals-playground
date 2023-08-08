@@ -1,2 +1,19 @@
-<button (click)="toggleLoading()">Toggle loading</button>
-<h2>{{loading}}</h2>
+<h1>Signals examples</h1>
+<section>
+  <h2>List</h2>
+<button (click)="loadItems()">Load items</button>
+<h2>loaded: {{loaded()}}</h2>
+<ul>
+  <li *ngFor="let item of items(); let i = index" (click)="mutateEl(i)">
+    {{item.label}}
+  </li>
+</ul>
+</section>
+
+<section>
+  <h2>Counter</h2>
+  <button (click)="reset()">Reset</button>
+  <button (click)="subtract()">Subtract</button>
+  <button (click)="add()">Add</button>
+  <p><strong>counter: {{counter()}}</strong></p>
+</section>
