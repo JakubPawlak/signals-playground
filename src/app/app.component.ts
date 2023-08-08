@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'signals';
+
+  loading = false;
+
+  toggleLoading() {
+    this.loading = !this.loading;
+  }
 }
